@@ -1,14 +1,16 @@
-;; To use graphviz-dot-mode
-(load-file "~/.emacs.d/lisps/graphviz-dot-mode.el")
-
+;; Load lisps
+(add-to-list 'load-path "~/.emacs.d/lisps/") 
 (add-to-list 'load-path "~/.emacs.d/php/") 
+
 (require 'install-elisp) 
 (setq install-elisp-repository-directory "~/.emacs.d/php/")
-
 
 ;;auto-complete
 (require 'auto-complete)
 (locate-library "auto-complete.el")
+
+;; golang mode
+(require 'go-mode-load)
 
 ;;php-mode
 (require 'php-mode)
