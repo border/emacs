@@ -11,6 +11,7 @@
 
 ;; golang mode
 (require 'go-mode-load)
+(require 'go-autocomplete)
 
 ;;php-mode
 (require 'php-mode)
