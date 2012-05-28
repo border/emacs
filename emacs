@@ -9,7 +9,21 @@
 (transient-mark-mode t)
 (show-paren-mode t)
 (setq-default make-backup-files nil)
-(setq default-tab-width 4)              ;设置TAB默认的宽度
+
+;; 设置缩进
+(setq c-basic-offset 4)
+(setq default-tab-width 4)
+(setq tab-width 4)
+(setq tab-stop-list ())
+ ;; no tabs by default. modes that really need tabs should enable
+ ;; indent-tabs-mode explicitly. makefile-mode already does that, for
+ ;; example.
+ (setq-default indent-tabs-mode nil)
+ ;; if indent-tabs-mode is off, untabify before saving
+ (add-hook 'write-file-hooks 
+          (lambda () (if (not indent-tabs-mode)
+                         (untabify (point-min) (point-max)))))
+
 
 (global-set-key (kbd "C-x C-b") 'bs-show)
 (iswitchb-mode 1)
