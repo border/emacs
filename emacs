@@ -1,6 +1,10 @@
 (setq user-full-name    "Jiang Bian")
 (setq user-mail-address "borderj@gmail.com")
 
+;; 启动时的引导界面
+(setq inhibit-startup-message t)
+(setq gnus-inhibit-startup-message t)
+
 (setq column-number-mode t)
 (setq visible-bell t)
 (fset 'yes-or-no-p 'y-or-n-p)
