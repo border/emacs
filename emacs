@@ -1,3 +1,10 @@
+;;"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+;;" ModifiedBy: Jiang Bian - http://www.wifihack.net
+;;" Email: borderj-AT-gmail-com
+;;" Version: 1.0
+;;" Last Change: 2012-08-16
+;;"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 (setq user-full-name    "Jiang Bian")
 (setq user-mail-address "borderj@gmail.com")
 
