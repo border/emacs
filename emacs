@@ -63,6 +63,13 @@
 (require 'install-elisp) 
 (setq install-elisp-repository-directory "~/.emacs.d/php/")
 
+;; tabbar
+(require 'tabbar)
+(tabbar-mode 1)
+;; tabbar 跳转快捷键绑定
+(global-set-key [(meta n)] 'tabbar-backward)
+(global-set-key [(meta p)] 'tabbar-forward)
+
 
 ;;智能括号
 (require 'autopair)                     ;;智能自动补全括号 http://www.emacswiki.org/emacs/AutoPairs

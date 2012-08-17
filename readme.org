@@ -1,0 +1,76 @@
+#+TITLE: Emacs学习笔记
+#+AUTHOR: Jiang Bian
+#+EMAIL: borderj@gmail.com
+#+DATE: 2012.08.16
+#+VERSION: v0.2 
+#+LINK_HOME: http://wifihack.net
+
+* 安装
+
+    cp emacs ~/.emacs
+    cp -r emacs.d ~/.emacs.d
+
+
+* 快捷键
+
+** 删除快捷键
+#+TABLE: 删除快捷键
+#+STARTUP: align
+#+ATTR_HTML: border="2" rules="all" frame="all"
+|------+---------------+-------------------------+----------------------------------------------------|
+|      | 按键          | 命令                    | 作用                                               |
+|------+---------------+-------------------------+----------------------------------------------------|
+| 删除 | C-d           | delete-char             | 删除光标处字符                                     |
+|      | Backspace     | delete-backward-char    | 删除光标前字符                                     |
+|      | M-\           | delete-horizontal-space | 删除光标处的所有空格和Tab字符                      |
+|      | M-SPC         | just-one-space          | 删除光标处的所有空格和Tab字符，但留下一个          |
+|      | C-x C-o       | delete-blank-lines      | 删除光标周围的空白行，保留当前行                   |
+|      | M-^           | delete-indentation      | 将两行合为一行，删除之间的空白和缩进               |
+|      | C-k           | kill-line               | 从光标处起删除该行                                 |
+|      | C-S-Backspace | kill-whole-line         | 删除整行                                           |
+|      | C-w           | kill-region             | 删除区域                                           |
+|      | M-w           | kill-ring-save          | 复制到kill 环，而不删除                            |
+|      | M-d           | kill-word               | 删除光标起一个单词                                 |
+|      | M-Backspace   | backward-kill-word      | 删除光标前单词                                     |
+|      | M-k           | kill-sentence           | 删除光标起一句                                     |
+|      | C-x Backspace | backward-kill-sentence  | 删除光标前删一句                                   |
+|      | M-z char      | zap-to-char             | 删至字符char为止                                   |
+|      | C-y           | yank                    | 召回                                               |
+|      | M-y           | yank-pop                | 召回前一个                                         |
+|      | C-M-w         | append-next-kill        | 下一个删掉内容和上次删除合并                       |
+|      | C-h v         | describe-variable       | 显示变量内容                                       |
+|      | (none)        | append-to-buffer        | 将区域中内容加入到一个buffer中                     |
+|      | (none)        | prepend-to-buffer       | 将区域中内容加入到一个buffer光标前                 |
+|      | (none)        | copy-to-buffer          | 区域中内容加入到一个buffer中，删除该buffer原有内容 |
+|      | (none)        | insert-buffer           | 在该位置插入指定的buffer中所有内容                 |
+|      | (none)        | append-to-file          | 将区域中内容复制到一个文件中                       |
+|      | (none)        | cua-mode                | 启用/停用CUA绑定                                   |
+|------+---------------+-------------------------+----------------------------------------------------|
+
+** 窗口快捷键
+#+TABLE: 窗口快捷键
+#+STARTUP: align
+#+ATTR_HTML: border="2" rules="all" frame="all"
+|-----------+-------------------------------------+----------------------------------------|
+| 按键      | 命令                                | 作用                                   |
+|-----------+-------------------------------------+----------------------------------------|
+| C-x 2     | split-window-vertically             | 垂直拆分窗口                           |
+| C-x 3     | split-window-horizontally           | 水平拆分窗口                           |
+| C-x o     | other-window                        | 选择下一个窗口                         |
+| C-M-v     | scroll-other-window                 | 滚动下一个窗口                         |
+| C-x 4 b   | switch-to-buffer-other-window       | 在另一个窗口打开缓冲                   |
+| C-x 4 C-o | display-buffer                      | 在另一个窗口打开缓冲，但不选中         |
+| C-x 4 f   | find-file-other-window              | 在另一个窗口打开文件                   |
+| C-x 4 d   | dired-other-window                  | 在另一个窗口打开文件夹                 |
+| C-x 4 m   | mail-other-window                   | 在另一个窗口写邮件                     |
+| C-x 4 r   | find-file-read-only-other-window    | 在另一个窗口以只读方式打开文件         |
+| C-x 0     | delete-window                       | 关闭当前窗口                           |
+| C-x 1     | delete-other-windows                | 关闭其它窗口                           |
+| C-x 4 0   | kill-buffer-and-window              | 关闭当前窗口和缓冲                     |
+| C-x ^     | enlarge-window                      | 增高当前窗口                           |
+| C-x {     | shrink-window-horizontally          | 将当前窗口变窄                         |
+| C-x }     | enlarge-window-horizontally         | 将当前窗口变宽                         |
+| C-x -     | shrink-window-if-larger-than-buffer | 如果窗口比缓冲大就缩小                 |
+| C-x +     | balance-windows                     | 所有窗口一样高                         |
+|           | windmove-right                      | 切换到右边的窗口(类似：up, down, left) |
+|-----------+-------------------------------------+----------------------------------------|
