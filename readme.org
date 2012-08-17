@@ -1,18 +1,17 @@
 #+TITLE: Emacs学习笔记
 #+AUTHOR: Jiang Bian
 #+EMAIL: borderj@gmail.com
-#+DATE: 2012.08.16
-#+VERSION: v0.2 
+#+DATE: 2012.08.17
+#+VERSION: v0.3
 #+LINK_HOME: http://wifihack.net
 
 * 安装
-
+#+BEGIN_EXAMPLE
     cp emacs ~/.emacs
     cp -r emacs.d ~/.emacs.d
-
+#+END_EXAMPLE
 
 * 快捷键
-
 ** 删除快捷键
 #+TABLE: 删除快捷键
 #+STARTUP: align
@@ -74,3 +73,15 @@
 | C-x +     | balance-windows                     | 所有窗口一样高                         |
 |           | windmove-right                      | 切换到右边的窗口(类似：up, down, left) |
 |-----------+-------------------------------------+----------------------------------------|
+
+** tabbar切换buffer快捷键
+#+TABLE: tabbar切换buffer快捷键
+#+STARTUP: align
+#+ATTR_HTML: border="2" rules="all" frame="all"
+|------+------+--------------|
+| 按键 | 命令 | 作用         |
+|------+------+--------------|
+| M-n  |      | 下一个buffer |
+| M-p  |      | 上一个buffer |
+|------+------+--------------|
+
