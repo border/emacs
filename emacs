@@ -2,7 +2,7 @@
 ;;" ModifiedBy: Jiang Bian - http://www.wifihack.net
 ;;" Email: borderj-AT-gmail-com
 ;;" Version: 1.0
-;;" Last Change: 2012-08-16
+;;" Last Change: 2012-08-17
 ;;"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 (setq user-full-name    "Jiang Bian")
@@ -20,6 +20,8 @@
 (transient-mark-mode t)
 (show-paren-mode t)
 (setq-default make-backup-files nil)
+;disable backup
+(setq backup-inhibited t)
 
 ;; 设置缩进
 (setq c-basic-offset 4)
