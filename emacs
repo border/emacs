@@ -12,6 +12,9 @@
 (setq inhibit-startup-message t)
 (setq gnus-inhibit-startup-message t)
 
+;; 去掉Ctrl+空格
+(global-set-key (kbd "C-SPC") 'nil) 
+
 (setq column-number-mode t)
 (setq visible-bell t)
 (fset 'yes-or-no-p 'y-or-n-p)
