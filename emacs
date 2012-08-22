@@ -71,6 +71,10 @@
 (global-set-key [f5] 'revert-buffer)
 (global-set-key [C-f5] 'revert-buffer-with-coding-system)
 
+;; multi-term
+(require 'multi-term)
+(setq multi-term-program "/bin/bash")
+
 ;; tabbar
 (require 'tabbar)
 (tabbar-mode 1)
