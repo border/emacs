@@ -1,8 +1,8 @@
 ;;"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ;;" ModifiedBy: Jiang Bian - http://www.wifihack.net
 ;;" Email: borderj-AT-gmail-com
-;;" Version: 1.0
-;;" Last Change: 2012-08-17
+;;" Version: 1.1
+;;" Last Change: 2012-08-22
 ;;"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 (setq user-full-name    "Jiang Bian")
@@ -14,6 +14,14 @@
 
 ;; 去掉Ctrl+空格
 (global-set-key (kbd "C-SPC") 'nil) 
+
+;; Load lisps
+(add-to-list 'load-path "~/.emacs.d/lisps/") 
+(add-to-list 'load-path "~/.emacs.d/php/") 
+(add-to-list 'load-path "~/.emacs.d/auto-complete/") 
+
+(require 'install-elisp) 
+(setq install-elisp-repository-directory "~/.emacs.d/php/")
 
 (setq column-number-mode t)
 (setq visible-bell t)
@@ -59,12 +67,9 @@
 (setq x-select-enable-primary nil)  ;; stops killing/yanking interacting with primary X11 selection
 (setq select-active-regions t) ;  active region sets primary X11 selection
 
-;; Load lisps
-(add-to-list 'load-path "~/.emacs.d/lisps/") 
-(add-to-list 'load-path "~/.emacs.d/php/") 
-
-(require 'install-elisp) 
-(setq install-elisp-repository-directory "~/.emacs.d/php/")
+;; Reload File
+(global-set-key [f5] 'revert-buffer)
+(global-set-key [C-f5] 'revert-buffer-with-coding-system)
 
 ;; tabbar
 (require 'tabbar)
@@ -92,8 +97,13 @@
 (window-number-meta-mode 1)
 
 ;;auto-complete
-(require 'auto-complete)
-(locate-library "auto-complete.el")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
+(ac-config-default)
+
+(local-set-key (kbd "M-/") 'semantic-complete-analyze-inline)
+(local-set-key "." 'semantic-complete-self-insert)
+(local-set-key ">" 'semantic-complete-self-insert)
 
 ;; golang mode
 (require 'go-mode-load)
