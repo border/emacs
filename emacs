@@ -20,6 +20,7 @@
 (add-to-list 'load-path "~/.emacs.d/php/") 
 (add-to-list 'load-path "~/.emacs.d/auto-complete/") 
 (add-to-list 'load-path "~/.emacs.d/color-theme/") 
+(add-to-list 'load-path "~/.emacs.d/ibus/") 
 
 (require 'install-elisp) 
 (setq install-elisp-repository-directory "~/.emacs.d/php/")
@@ -81,6 +82,10 @@
 ;; Color theme tangotango
 (require 'color-theme-tangotango)
 (color-theme-tangotango)
+
+;; ibus
+(require 'ibus)
+(add-hook 'after-init-hook 'ibus-mode-on)
 
 ;; multi-term
 (require 'multi-term)
