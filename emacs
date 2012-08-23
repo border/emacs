@@ -19,6 +19,7 @@
 (add-to-list 'load-path "~/.emacs.d/lisps/") 
 (add-to-list 'load-path "~/.emacs.d/php/") 
 (add-to-list 'load-path "~/.emacs.d/auto-complete/") 
+(add-to-list 'load-path "~/.emacs.d/color-theme/") 
 
 (require 'install-elisp) 
 (setq install-elisp-repository-directory "~/.emacs.d/php/")
@@ -70,6 +71,10 @@
 ;; Reload File
 (global-set-key [f5] 'revert-buffer)
 (global-set-key [C-f5] 'revert-buffer-with-coding-system)
+
+;; Color theme tangotango
+(require 'color-theme-tangotango)
+(color-theme-tangotango)
 
 ;; multi-term
 (require 'multi-term)
