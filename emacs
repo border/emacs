@@ -68,6 +68,12 @@
 (setq x-select-enable-primary nil)  ;; stops killing/yanking interacting with primary X11 selection
 (setq select-active-regions t) ;  active region sets primary X11 selection
 
+;; Markdown 
+(autoload 'markdown-mode "markdown-mode.el"
+    "Major mode for editing Markdown files" t)
+(setq auto-mode-alist
+    (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
 ;; Reload File
 (global-set-key [f5] 'revert-buffer)
 (global-set-key [C-f5] 'revert-buffer-with-coding-system)
