@@ -24,6 +24,11 @@
 (require 'install-elisp) 
 (setq install-elisp-repository-directory "~/.emacs.d/php/")
 
+;; 去掉那个大大的工具栏
+(tool-bar-mode nil)  
+;; 去掉菜单栏
+(menu-bar-mode nil)  
+
 (setq column-number-mode t)
 (setq visible-bell t)
 (fset 'yes-or-no-p 'y-or-n-p)
