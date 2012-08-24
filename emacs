@@ -87,10 +87,6 @@
 (require 'ibus)
 (add-hook 'after-init-hook 'ibus-mode-on)
 
-;; multi-term
-(require 'multi-term)
-(setq multi-term-program "/bin/bash")
-
 ;; tabbar
 (require 'tabbar)
 (tabbar-mode 1)
