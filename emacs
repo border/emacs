@@ -15,6 +15,9 @@
 ;; 去掉Ctrl+空格
 (global-set-key (kbd "C-SPC") 'nil) 
 
+;; Linux 下 Emacs 复制内容到系统的剪切板
+(setq x-select-enable-clipboard t)
+
 ;; Load lisps
 (add-to-list 'load-path "~/.emacs.d/lisps/") 
 (add-to-list 'load-path "~/.emacs.d/php/") 
