@@ -52,11 +52,6 @@
  ;; indent-tabs-mode explicitly. makefile-mode already does that, for
  ;; example.
  (setq-default indent-tabs-mode nil)
- ;; if indent-tabs-mode is off, untabify before saving
- (add-hook 'write-file-hooks 
-          (lambda () (if (not indent-tabs-mode)
-                         (untabify (point-min) (point-max)))))
-
 
 (global-set-key (kbd "C-x C-b") 'bs-show)
 (iswitchb-mode 1)
