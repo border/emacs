@@ -94,6 +94,15 @@
 
 
 ;;智能括号
+;; % 匹配括号
+(global-set-key "%" 'match-paren)
+(defun match-paren (arg)
+ "Go to the matching paren if on a paren; otherwise insert %."
+ (interactive "p")
+ (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
+  ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
+  (t (self-insert-command (or arg 1)))))
+
 (require 'autopair)                     ;;智能自动补全括号 http://www.emacswiki.org/emacs/AutoPairs
 ;;(require 'auto-pair+)
 (autopair-global-mode 1)                ;; 全局启用智能补全括号
