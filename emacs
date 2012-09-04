@@ -1,8 +1,8 @@
 ;;"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ;;" ModifiedBy: Jiang Bian - http://www.wifihack.net
 ;;" Email: borderj-AT-gmail-com
-;;" Version: 1.1
-;;" Last Change: 2012-08-22
+;;" Version: 1.2
+;;" Last Change: 2012-09-04
 ;;"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 (setq user-full-name    "Jiang Bian")
