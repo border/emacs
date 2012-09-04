@@ -32,6 +32,9 @@
 ;; 去掉菜单栏
 (menu-bar-mode nil)  
 
+;; auto image file open and display
+(auto-image-file-mode)
+
 (setq column-number-mode t)
 (setq visible-bell t)
 (fset 'yes-or-no-p 'y-or-n-p)
