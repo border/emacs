@@ -12,6 +12,13 @@
 #+END_EXAMPLE
 
 * 快捷键
+** Linux
+ * Disable All Menu Access Keys
+Edit->Keyboard Shortcuts->Disable all menu access keys
+
+** Mac
+ * 需要屏蔽掉ibus
+
 ** 文件操作
 #+TABLE: 文件操作
 #+STARTUP: align
