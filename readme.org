@@ -83,7 +83,7 @@ Edit->Keyboard Shortcuts->Disable all menu access keys
 | C-x ]        | 前移一页                                           |
 | C-x [        | 后移一页                                           |
 | M-<          | 前移到文件头                                       |
-| M->;         | 后移到文件尾                                       |
+| M->          | 后移到文件尾                                       |
 | C-l          | 重新绘制屏幕，当前行放在画面中心                   |
 | M-n 或 C-u n | 重复执行n次后续命令                                |
 | M-g M-g      | 按下M-x后在辅助输入区中输入"goto-line"跳到指定的行 |
